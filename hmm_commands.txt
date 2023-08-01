@@ -1,0 +1,20 @@
+# download hmm model from pfam db
+wget http://pfam.xfam.org/family/PF00931/hmm -O PF00931_NB_ARC
+
+# identify protein families
+hmmsearch --tblout hua_s1.table -o hua_s1.result PF00931_NB_ARC hua_s1.faa
+
+# filter
+cat hua_s1.table |  awk '$5<1e-04 {print}' | grep -v "#" > filtered01.txt
+
+Make sure to change the PF name to the one for protease inhibitor.
+
+#pfam hmm model was downloaded manually from this site https://www.ebi.ac.uk/interpro/download/Pfam/ 
+
+#I concatenated all the PFam hmm inhibitor models before running this code
+
+#Hmm search command that worked for me
+hmmsearch --tblout RH89_039_16_potato.v3.gene_models.pep.table -o RH89_039_16_potato.v3.gene_models.pep.results PF00197_Trypsin_and_protease_inhibitor.hmm RH89_039_16_potato.v3.gene_models.pep.faa
+
+#for filter 
+cat RH89_039_16_potato.v3.gene_models.pep.table  |  awk '$5<1e-04 {print}' | grep -v "#" > filtered01.txt

@@ -1,0 +1,23 @@
+# download and install blast
+
+sudo apt-get install ncbi-blast+
+
+# Download protein sequences 
+ 
+#make database of the subject 
+makeblastdb -in new_species.fasta -dbtype nucl -out db/new_species
+OR,
+makeblastdb -in proteaseinhibitorchacoense.fa -dbtype prot -out db/proteaseinhibitorchacoense 
+
+#Blast of the query against the subject 
+blastp -db db/proteaseinhibitorchacoense -query queries/proteaseinhibitortuberosum.fa > out
+OR,
+
+blastp -query queries/proteaseinhibitortuberosum.fa -db db/proteaseinhibitorchacoense -out pinhibit.out
+OR, 
+
+blastp -query queries/proteaseinhibitortuberosum.fa -db db/proteaseinhibitorchacoense -out pinhibit.tab.out -outfmt 6
+
+blastp -query GCF_001406875.1_SPENNV200_protein.faa -db db/arabidopsisinhibit -out pinhibit.tab.out -evalue 1e-50 -outfmt 6
+
+

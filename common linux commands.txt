@@ -1,0 +1,14 @@
+#command to copy directory from one location to another 
+cp -R db_chac/ /mnt/c/Users/dhire/desktop/proteinsequences/Solanumdulcamara_bittersweet
+
+#kill 
+ctrl+C
+
+# Installing ubuntu in visual studio code in windows, follow this youtube video
+
+https://www.youtube.com/watch?v=bRW5r7TK6KM 
+
+
+# windows+E command will open the file explorer
+
+

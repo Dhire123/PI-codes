@@ -1,0 +1,7 @@
+Simplified code for running autodock vina
+
+./vina/vina.exe --receptor cysteineprotease_S_aureus.pdbqt --ligand Solca_03G023080_5_cysteinePI_potato.pdbqt --config config.txt --log log.txt --out output.pdbqt
+
+Before running this code following two tutorials should be watched
+https://www.youtube.com/watch?v=Sux91FJ3Xe8&t=936s
+https://www.youtube.com/watch?v=vU2aNuP3Y8I

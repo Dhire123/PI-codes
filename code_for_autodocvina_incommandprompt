@@ -1,0 +1,1 @@
+ "C:\Program Files (x86)\The Scripps Research Institute\Vina\vina.exe" --receptor Solca_03G023080_5.pdbqt --ligand ligand.pdbqt --config config.txt --log log.txt --out output.pdbqt

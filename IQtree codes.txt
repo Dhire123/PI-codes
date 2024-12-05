@@ -1,0 +1,12 @@
+* Infer an ML tree and perform SH-aLRT test as well as ultrafast bootstrap with 1000 replicates:
+
+  iqtree -s data.phy -m TEST -alrt 1000 -bb 1000
+
+* IQ-TREE can perform the ultrafast bootstrap with partition models by e.g., 
+iqtree-s example.phy-p example.nex-B 1000 
+
+# for version 1.x change-p to-spp and-B to-bb
+
+
+* with auto model selection
+iqtree -s <input_file> -m MFP -bb 1000 -nt AUTO

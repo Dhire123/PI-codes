@@ -1,0 +1,16 @@
+# For preparing the sample fasta file for Bactopia run
+source ~/.bashrc
+mamba activate bactopia
+bactopia prepare --path /home/j11q929/Bactopia/FASTA/ --assembly-ext .fasta > newfasta.txt
+
+# Running code in SLURM
+## Bactopiaall run
+source ~/.bashrc
+mamba activate bactopia
+cd ~/Bactopia
+bactopia dataset
+bactopia \
+  --samples newfasta.txt \
+  --outdir dickeyapectoboth
+
+
